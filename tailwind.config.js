@@ -8,7 +8,7 @@ module.exports = {
       colors: {
         brand: {
           primary: '#333',
-          secondary: '#FFEC84',
+          secondary: '#f8f8f8',
           tertiary: '#D6D6D6',
           quaternary: '#fff',
           quinary: '#525558',

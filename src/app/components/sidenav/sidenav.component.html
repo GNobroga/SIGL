@@ -1,5 +1,9 @@
-<div class="sidenav min-h-screen flex ">
-  <div class="sidenav__drawer w-screen px-4 sm:w-[200px] pt-5 bg-brand-primary fixed h-screen transition-all flex flex-col  items-center">
+<div class="sidenav min-h-screen flex">
+
+
+  <div></div>
+
+  <div class="sidenav__drawer w-screen px-4 sm:w-[200px] z-20 pt-5 bg-brand-primary fixed h-screen transition-all flex flex-col  items-center">
     <div class="sidernav__drawer-profile w-full ps-4 flex flex-col gap-3 items-center relative sm:-translate-x-5">
       <div class="w-[100px] h-[100px] bg-white rounded-full"></div>
       <span class="text-white relative opacity-80">Gabriel Cardoso</span>
@@ -31,7 +35,9 @@
 
     </div>
   </div>
-  <div class="sidenav__content bg-gray-100 flex-1">
+
+  <div class="sidenav__content bg-brand-secondary overflow-hidden">
     <ng-content></ng-content>
   </div>
+
 </div>

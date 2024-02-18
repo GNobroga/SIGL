@@ -1,14 +1,17 @@
 import { Component, OnInit, signal } from '@angular/core';
 import { SharedModule } from '../../../shared/shared.module';
-import { ChartBasicBarComponent } from '../../../components/charts/chart-basic-bar/chart-basic-bar.component';
-import { ChartPieComponent } from '../../../components/charts/chart-pie/chart-pie.component';
-import { ChartVerticalBarComponent } from '../../../components/charts/chart-vertical-bar/chart-vertical-bar.component';
 import { ChartLineStylesComponent } from '../../../components/charts/chart-line-styles/chart-line-styles.component';
+import { DashboardStatusComponent } from '../components/dashboard-status/dashboard-status.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [SharedModule, ChartBasicBarComponent, ChartPieComponent, ChartVerticalBarComponent, ChartLineStylesComponent],
+  imports: [
+    SharedModule,
+
+    ChartLineStylesComponent,
+    DashboardStatusComponent,
+  ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
