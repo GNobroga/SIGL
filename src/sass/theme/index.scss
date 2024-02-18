@@ -1,10 +1,3 @@
-@use "@angular/material" as mat;
-@include mat.core();
-
-$custom-color-primary: #9438F5;
-
-
-
 :root {
   --color-primary: #9438F5;
   --color-secondary: #E8EBED;
