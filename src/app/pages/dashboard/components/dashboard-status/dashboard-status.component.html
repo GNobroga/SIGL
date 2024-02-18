@@ -2,19 +2,19 @@
 
   <h1 class="text-2xl font-medium">Dashboard</h1>
 
-  <ul class="grid grid-cols-2  sm:grid-cols-4 gap-5">
+  <ul class="grid grid-cols-1  sm:grid-cols-2 md:grid-cols-4 gap-5">
 
     <li class="dashboard-status-item p-3 flex gap-3 flex-col bg-white min-h-36 rounded-xl shadow-xl cursor-pointer">
-      <div class="flex justify-between flex-1">
+      <div class="flex justify-between flex-1 flex-wrap">
         <div class="flex flex-col gap-3">
           <h2 class="text-sm opacity-90">Total Clientes</h2>
           <p class="text-2xl font-bold">40,689</p>
         </div>
-        <div class="bg-blue-100 self-start p-4 rounded-xl">
+        <div class="bg-blue-100 self-start p-4 rounded-xl hidden sm:hidden md:block">
           <img src="assets/icons/user.svg" class="min-w-7"/>
         </div>
       </div>
-      <div class="flex gap-2 items-center flex-wrap">
+      <div class="flex gap-2 items-center flex-wrap ">
         <img src="assets/icons/elevacao.png" class="w-5">
         <span class="text-green-600">10%</span>
         <p class="text-sm  font-medium opacity-80">Ganho de ontem</p>
@@ -22,12 +22,12 @@
     </li>
 
     <li class="dashboard-status-item p-3 flex gap-3 flex-col bg-white min-h-36 rounded-xl shadow-xl cursor-pointer">
-      <div class="flex justify-between flex-1">
+      <div class="flex justify-between flex-1 flex-wrap">
         <div class="flex flex-col gap-3">
           <h2 class="text-sm opacity-90">Total Pedidos</h2>
           <p class="text-2xl font-bold">10293</p>
         </div>
-        <div class="bg-orange-100 self-start p-4 rounded-xl">
+        <div class="bg-orange-100 self-start p-4 rounded-xl hidden sm:hidden md:block">
           <img src="assets/icons/order.svg" class="min-w-7"/>
         </div>
       </div>
@@ -39,12 +39,12 @@
     </li>
 
     <li class="dashboard-status-item p-3 flex gap-3 flex-col bg-white min-h-36 rounded-xl shadow-xl cursor-pointer">
-      <div class="flex justify-between flex-1">
+      <div class="flex justify-between flex-1 flex-wrap">
         <div class="flex flex-col gap-3">
           <h2 class="text-sm opacity-90">Total Vendas</h2>
           <p class="text-2xl font-bold">$89,000</p>
         </div>
-        <div class="bg-green-100 self-start p-4 rounded-xl">
+        <div class="bg-green-100 self-start p-4 rounded-xl hidden sm:hidden md:block">
           <img src="assets/icons/chart-up.png" class="min-w-7"/>
         </div>
       </div>
@@ -56,12 +56,12 @@
     </li>
 
     <li class="dashboard-status-item p-3 flex gap-3 flex-col bg-white min-h-36 rounded-xl shadow-xl cursor-pointer">
-      <div class="flex justify-between flex-1">
+      <div class="flex justify-between flex-1 flex-wrap">
         <div class="flex flex-col gap-3">
           <h2 class="text-sm opacity-90">Total Processando</h2>
           <p class="text-2xl font-bold">2040</p>
         </div>
-        <div class="bg-red-100 self-start p-4 rounded-xl">
+        <div class="bg-red-100 self-start p-4 rounded-xl hidden sm:hidden md:block">
           <img src="assets/icons/pedido-processado.png" class="min-w-7"/>
         </div>
       </div>
