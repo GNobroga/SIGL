@@ -1,4 +1,4 @@
-# SIGL
+# SIGL (Em construção)
 
 É um Sistema de Gestão para o GLDelivery.
 
