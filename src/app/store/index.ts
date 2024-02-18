@@ -1,16 +1,25 @@
-import { createAction, createReducer, on } from "@ngrx/store";
+import {  createReducer, on } from "@ngrx/store";
+import { toggleMenu } from "./actions";
 
-export interface AppState {
-  showMenu: boolean;
+export interface State {
+  menu: {
+    showMenu: boolean;
+  }
 }
 
-export const toggleMenu = createAction('[Menu] Toggle');
+export interface AppState {
+  global: State;
+}
 
-const initialState: AppState = {
-  showMenu: false,
+const initialState: State = {
+  menu: {
+    showMenu: false
+  }
 };
+
+export const STATE_KEY = 'global';
 
 export default createReducer(
   initialState,
-  on(toggleMenu, state => ({...state, showMenu: !state.showMenu })),
+  on(toggleMenu, state => ({...state, menu: { showMenu: !state.menu.showMenu }})),
 );

@@ -1,10 +1,7 @@
 <div class="sidenav min-h-screen flex">
 
-
-  <div></div>
-
-  <div class="sidenav__drawer w-screen px-4 sm:w-[200px] z-20 pt-5 bg-brand-primary fixed h-screen transition-all flex flex-col  items-center">
-    <div class="sidernav__drawer-profile w-full ps-4 flex flex-col gap-3 items-center relative sm:-translate-x-5">
+  <div  [class.visible]="!showMenu()" class="sidenav__drawer px-4 sm:w-[200px] z-20 pt-5 bg-brand-primary fixed h-full transition-all flex flex-col items-center">
+    <div class="sidernav__drawer-profile w-full ps-4 flex flex-col gap-3 items-center relative -translate-x-5">
       <div class="w-[100px] h-[100px] bg-white rounded-full"></div>
       <span class="text-white relative opacity-80">Gabriel Cardoso</span>
     </div>
@@ -13,7 +10,7 @@
       @for (menu of menus; track menu) {
         <li routerLink="{{ menu.routeLink }}" class="p-2 flex gap-3 text-white  items-center cursor-pointer hover:bg-brand-quinary rounded-sm transition-all">
           <img [src]="menu.iconUrl"/>
-          <span class="relative top-[0.1rem] sm:text-sm">{{ menu.label }}</span>
+          <span class="relative top-[0.1rem] text-sm">{{ menu.label }}</span>
         </li>
       }
     </ul>
@@ -23,18 +20,21 @@
     <div class="mt-5 flex flex-col gap-2 w-full sm:items-center">
       <span class=" p-2 flex items-center w-full gap-3 rounded-sm cursor-pointer  transition-all   hover:bg-brand-quinary  ">
         <img src="assets/icons/config.svg"/>
-        <span class="relative  text-white sm:text-sm">Configurações</span>
+        <span class="relative  text-white text-sm">Configurações</span>
       </span>
       <span class="mb-3 p-2 flex items-center w-full gap-3 rounded-sm cursor-pointer  transition-all  hover:bg-brand-quinary ">
         <img src="assets/icons/signout.svg"/>
-        <span class="relative  text-white sm:text-sm">Sair</span>
+        <span class="relative  text-white text-sm">Sair</span>
       </span>
     </div>
 
-    <div class="bg-brand-senary absolute top-0 right-0 h-full w-2 hidden sm:block"></div>
+    <div class="bg-brand-senary absolute top-0 right-0 h-full w-2 hidden lg:block"></div>
+
+    <app-menu-mobile class="absolute left-4 top-5  xs:block hidden sm:hidden"/>
+    
   </div>
 
-  <div class="sidenav__content bg-brand-secondary">
+  <div class="sidenav__content bg-brand-secondary  flex-1 {{ !showMenu() ? 'ps-[200px]' : ''}}">
     <ng-content></ng-content>
   </div>
 

@@ -5,6 +5,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      screens: {
+        'xs': { min: '10px', max: '30rem' },
+      },
       colors: {
         brand: {
           primary: '#333',
@@ -12,7 +15,7 @@ module.exports = {
           tertiary: '#D6D6D6',
           quaternary: '#fff',
           quinary: '#525558',
-          senary: '#A02C2C', 
+          senary: '#A02C2C',
         },
       }
     },

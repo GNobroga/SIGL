@@ -1,6 +1,10 @@
 import { Component, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { Store } from '@ngrx/store';
+import { AppState } from '../../store';
+import { toSignal } from '@angular/core/rxjs-interop';
+import { NgIf } from '@angular/common';
+import { MenuMobileComponent } from '../menu-mobile/menu-mobile.component';
 
 interface SidenavMenu {
   iconUrl: string;
@@ -11,7 +15,7 @@ interface SidenavMenu {
 @Component({
   selector: 'app-sidenav',
   standalone: true,
-  imports: [RouterLink],
+  imports: [RouterLink, NgIf, MenuMobileComponent],
   templateUrl: './sidenav.component.html',
   styleUrl: './sidenav.component.scss'
 })
@@ -45,7 +49,7 @@ export class SidenavComponent {
     }
   ];
 
-  #store = inject(Store);
+  #store: Store<AppState> = inject(Store<AppState>);
 
-  showMenu = this.#store.select('store')
+  showMenu = toSignal(this.#store.select(state => state.global.menu.showMenu));
 }
