@@ -10,4 +10,4 @@
 
 ![alt text](image-3.png)
 
-### Feito por amor por <3
+### Feito por amor por mim <3
