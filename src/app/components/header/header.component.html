@@ -1,9 +1,9 @@
-<header class="header bg-brand-primary h-16 flex justify-between items-center px-3">
-  <h1 class="header__title text-xl font-medium text-yellow-600">Home</h1>
+<header class="header shadow-xl  bg-brand-primary h-16 flex justify-between items-center px-3">
+  <h1 class="header__title text-xl font-medium text-yellow-500">Home</h1>
   <div class="header__content flex gap-4 items-center">
-    <div class="header_content-icon p-1 rounded-full bg-brand-quaternary cursor-pointer">
-      <img src="assets/icons/moon.svg"/>
+    <div class="header_content-icon p-1 rounded-full  cursor-pointer">
+      <img src="assets/icons/moon.svg" class="hidden md:block"/>
     </div>
-    <app-menu-mobile/>
+    <app-menu-mobile class="md:hidden block"/>
   </div>
 </header>
