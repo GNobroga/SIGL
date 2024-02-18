@@ -4,12 +4,12 @@ import { HeaderComponent } from '../../components/header/header.component';
 import { SidenavComponent } from '../../components/sidenav/sidenav.component';
 
 @Component({
-  selector: 'app-main',
+  selector: 'app-dashboard',
   standalone: true,
   imports: [RouterOutlet, SidenavComponent, HeaderComponent],
-  templateUrl: './main.component.html',
-  styleUrl: './main.component.scss'
+  templateUrl: './dashboard.component.html',
+  styleUrl: './dashboard.component.scss'
 })
-export class MainComponent {
+export class DashboardComponent {
 
 }

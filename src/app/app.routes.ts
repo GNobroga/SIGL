@@ -1,5 +1,5 @@
 import { Routes } from '@angular/router';
-import { MainComponent } from './pages/main/main.component';
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import AccountComponent from './pages/account/account.component';
 
 export const routes: Routes = [
@@ -20,15 +20,15 @@ export const routes: Routes = [
   },
   {
     path: 'dashboard',
-    component: MainComponent,
+    component: DashboardComponent,
     children: [
       {
         path: '',
-        loadComponent: () => import('./pages/home/home.component'),
+        loadComponent: () => import('./pages/dashboard/home/home.component'),
       },
       {
         path: 'users',
-        loadComponent: () => import('./pages/users/users.component'),
+        loadComponent: () => import('./pages/dashboard/users/users.component'),
       },
     ],
   },

@@ -1,9 +1,9 @@
 import { Component, OnInit, signal } from '@angular/core';
-import { SharedModule } from '../../shared/shared.module';
-import { ChartBasicBarComponent } from '../../components/charts/chart-basic-bar/chart-basic-bar.component';
-import { ChartPieComponent } from '../../components/charts/chart-pie/chart-pie.component';
-import { ChartVerticalBarComponent } from '../../components/charts/chart-vertical-bar/chart-vertical-bar.component';
-import { ChartLineStylesComponent } from '../../components/charts/chart-line-styles/chart-line-styles.component';
+import { SharedModule } from '../../../shared/shared.module';
+import { ChartBasicBarComponent } from '../../../components/charts/chart-basic-bar/chart-basic-bar.component';
+import { ChartPieComponent } from '../../../components/charts/chart-pie/chart-pie.component';
+import { ChartVerticalBarComponent } from '../../../components/charts/chart-vertical-bar/chart-vertical-bar.component';
+import { ChartLineStylesComponent } from '../../../components/charts/chart-line-styles/chart-line-styles.component';
 
 @Component({
   selector: 'app-home',
