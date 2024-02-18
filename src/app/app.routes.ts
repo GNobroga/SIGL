@@ -16,7 +16,7 @@ export const routes: Routes = [
         path: '',
         loadComponent: () => import('./pages/account/login-form/login-form.component'),
       }
-    ]
+    ],
   },
   {
     path: 'dashboard',

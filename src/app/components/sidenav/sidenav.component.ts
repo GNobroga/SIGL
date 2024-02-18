@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { Store } from '@ngrx/store';
 
 interface SidenavMenu {
   iconUrl: string;
@@ -43,4 +44,8 @@ export class SidenavComponent {
       label: 'Relatórios'
     }
   ];
+
+  #store = inject(Store);
+
+  showMenu = this.#store.select('store')
 }

@@ -1,4 +1,7 @@
-import { Component, EventEmitter } from '@angular/core';
+import { Component, DoCheck, EventEmitter, OnInit, computed, effect, inject } from '@angular/core';
+import { Store } from '@ngrx/store';
+import { toSignal } from '@angular/core/rxjs-interop';
+import { toggleMenu } from '../../store';
 
 @Component({
   selector: 'app-menu-mobile',
@@ -9,9 +12,14 @@ import { Component, EventEmitter } from '@angular/core';
 })
 export class MenuMobileComponent {
 
-  public opened = false;
+  #store = inject(Store);
+
+  open = toSignal(this.#store.select<{ showMenu: boolean }>(state => state.store));
+
+  public opened = computed(() => this.open()?.showMenu);
+
 
   public toggle(): void {
-    this.opened = !this.opened;
+    this.#store.dispatch(toggleMenu());
   }
 }
