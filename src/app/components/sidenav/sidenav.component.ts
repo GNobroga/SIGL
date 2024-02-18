@@ -31,7 +31,7 @@ export class SidenavComponent {
     {
       iconUrl: 'assets/icons/users.svg',
       routeLink: 'users',
-      label: 'Fornecedores',
+      label: 'Entregadores',
     },
     {
       iconUrl: 'assets/icons/offers.svg',
