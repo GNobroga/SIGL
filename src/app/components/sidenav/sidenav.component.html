@@ -1,18 +1,19 @@
 <div class="sidenav min-h-screen">
-  <div class="sidenav__drawer bg-brand-primary p-3 pt-5 flex flex-col  items-center">
-    <span class="sidernav__drawer-logo w-12 h-12 bg-white rounded-full">
-
-    </span>
-    <div class="h-1 w-full mt-3 border-b border-brand-secondary opacity-70"></div>
+  <div class="sidenav__drawer bg-brand-primary p-3 pt-4 relative flex flex-col  items-center">
+    <span class="sidernav__drawer-logo w-12 h-12 bg-white rounded-full"></span>
+    <div class="h-[0.13rem] w-full mt-3 bg-yellow-600"></div>
     <ul class="mt-5 flex flex-col gap-5">
       @for (menu of menus; track menu) {
-        <li routerLink="{{ menu.routeLink }}" class="p-2 rounded-full hover:bg-brand-primary hover:bg-opacity-10">
+        <li routerLink="{{ menu.routeLink }}" class="p-2 rounded-full cursor-pointer bg-brand-quaternary">
           <img [src]="menu.iconUrl"/>
         </li>
       }
     </ul>
+    <span class="absolute bottom-0 mb-3 p-2 rounded-full cursor-pointer bg-brand-quaternary">
+      <img src="assets/icons/config.svg"/>
+    </span>
   </div>
-  <div class="sidenav__content">
+  <div class="sidenav__content bg-brand-quaternary">
     <ng-content></ng-content>
   </div>
 </div>

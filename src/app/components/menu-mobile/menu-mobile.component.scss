@@ -1,0 +1,27 @@
+.menu-mobile {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  @apply flex flex-col gap-2 items-center justify-center rounded-full  p-1;
+
+  &__bar {
+    height: 3px;
+    @apply bg-white rounded-md bg-yellow-600;
+    transition: all 0.2s ease;
+    width: 80%;
+
+    &.disabled {
+      display: none;
+    }
+
+    &--first {
+      transform-origin: center;
+      transform: translateY(6px) rotateZ(-135deg);
+    }
+
+    &--last {
+      transform-origin: center;
+      transform: translateY(-5px) rotateZ(135deg);
+    }
+  }
+}
