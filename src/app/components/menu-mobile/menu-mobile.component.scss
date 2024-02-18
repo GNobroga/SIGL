@@ -1,12 +1,12 @@
 .menu-mobile {
-  width: 40px;
-  height: 40px;
+  width: 38px;
+  height: 38px;
   cursor: pointer;
-  @apply flex flex-col gap-2 items-center justify-center rounded-full  p-1;
+  @apply flex flex-col gap-1 items-center justify-center rounded-full  p-1 relative;
 
   &__bar {
     height: 3px;
-    @apply bg-white rounded-md bg-yellow-500;
+    @apply  rounded-md bg-brand-quaternary;
     transition: all 0.2s ease;
     width: 80%;
 
@@ -16,12 +16,12 @@
 
     &--first {
       transform-origin: center;
-      transform: translateY(6px) rotateZ(-135deg);
+      transform: translateY(5px) rotateZ(-135deg);
     }
 
     &--last {
       transform-origin: center;
-      transform: translateY(-5px) rotateZ(135deg);
+      transform: translateY(-2.5px) rotateZ(135deg);
     }
   }
 }
