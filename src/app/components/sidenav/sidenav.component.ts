@@ -20,7 +20,7 @@ export class SidenavComponent {
     {
       iconUrl: 'assets/icons/home.svg',
       routeLink: '/home',
-      label: 'Home',
+      label: 'Dashboard',
     },
     {
       iconUrl: 'assets/icons/users.svg',
