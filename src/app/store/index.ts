@@ -13,7 +13,7 @@ export interface AppState {
 
 const initialState: State = {
   menu: {
-    showMenu: false
+    showMenu: true
   }
 };
 

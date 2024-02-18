@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 import { ChartModule } from 'primeng/chart';
 import { ProgressSpinnerModule } from 'primeng/progressspinner';
 
-
 @NgModule({
   declarations: [],
   imports: [

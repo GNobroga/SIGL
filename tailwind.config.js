@@ -16,6 +16,7 @@ module.exports = {
           quaternary: '#fff',
           quinary: '#525558',
           senary: '#A02C2C',
+          septnary: '#00FCC3',
         },
       }
     },
