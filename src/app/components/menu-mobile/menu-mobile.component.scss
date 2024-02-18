@@ -1,14 +1,14 @@
 .menu-mobile {
-  width: 38px;
-  height: 38px;
+  width: 35px;
+  height: 35px;
   cursor: pointer;
-  @apply flex flex-col gap-1 items-center justify-center rounded-full  p-1 relative;
+  @apply flex flex-col gap-1 items-center justify-center rounded-full bg-brand-quinary  p-2 relative;
 
   &__bar {
     height: 3px;
     @apply  rounded-md bg-brand-quaternary;
     transition: all 0.2s ease;
-    width: 80%;
+    width: 100%;
 
     &.disabled {
       display: none;
@@ -16,12 +16,12 @@
 
     &--first {
       transform-origin: center;
-      transform: translateY(5px) rotateZ(-135deg);
+      transform: translateY(3px) rotateZ(-135deg);
     }
 
     &--last {
       transform-origin: center;
-      transform: translateY(-2.5px) rotateZ(135deg);
+      transform: translateY(-4.2px) rotateZ(135deg);
     }
   }
 }

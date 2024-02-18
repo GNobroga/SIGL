@@ -2,11 +2,12 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
 @Component({
-  selector: 'app-root',
+  selector: 'app-account',
   standalone: true,
   imports: [RouterOutlet],
-  template: '<router-outlet/>',
+  templateUrl: './account.component.html',
+  styleUrl: './account.component.scss'
 })
-export class AppComponent {
+export default class AccountComponent {
 
 }

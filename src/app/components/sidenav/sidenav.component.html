@@ -7,7 +7,7 @@
 
     <ul class="mt-5 flex flex-col gap-5 w-full ">
       @for (menu of menus; track menu) {
-        <li routerLink="{{ menu.routeLink }}" class="p-2 flex gap-3 text-white  items-center cursor-pointer hover:opacity-50 transition-all">
+        <li routerLink="{{ menu.routeLink }}" class="p-2 flex gap-3 text-white  items-center cursor-pointer hover:bg-brand-quinary rounded-sm transition-all">
           <img [src]="menu.iconUrl"/>
           <span class="relative top-[0.1rem] sm:text-sm">{{ menu.label }}</span>
         </li>
@@ -16,19 +16,20 @@
 
     <div class="h-[0.13rem] w-full mt-3 bg-brand-quinary"></div>
 
-    <ul class="mt-5 flex flex-col gap-2 w-full sm:items-center">
-      <span class=" p-2 flex items-center w-full gap-3 rounded-full cursor-pointer  transition-all  hover:opacity-50 ">
+    <div class="mt-5 flex flex-col gap-2 w-full sm:items-center">
+      <span class=" p-2 flex items-center w-full gap-3 rounded-sm cursor-pointer  transition-all   hover:bg-brand-quinary  ">
         <img src="assets/icons/config.svg"/>
         <span class="relative  text-white sm:text-sm">Configurações</span>
       </span>
-      <span class="mb-3 p-2 flex items-center w-full gap-3 rounded-full cursor-pointer  transition-all  hover:opacity-50 ">
+      <span class="mb-3 p-2 flex items-center w-full gap-3 rounded-sm cursor-pointer  transition-all  hover:bg-brand-quinary ">
         <img src="assets/icons/signout.svg"/>
         <span class="relative  text-white sm:text-sm">Sair</span>
       </span>
-    </ul>
+    </div>
 
+    <div class="bg-brand-senary absolute top-0 right-0 h-full w-2.5 hidden sm:block">
 
-
+    </div>
   </div>
   <div class="sidenav__content bg-gray-100 flex-1">
     <ng-content></ng-content>
