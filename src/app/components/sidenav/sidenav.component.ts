@@ -1,11 +1,12 @@
 import { Component, OnInit, inject, signal } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { Store } from '@ngrx/store';
-import { AppState } from '../../store';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { NgIf } from '@angular/common';
 import { MenuMobileComponent } from '../menu-mobile/menu-mobile.component';
 import { SharedModule } from '../../shared/shared.module';
+import { Menu } from '../../store/models/menu.model';
+import { AppState } from '../../store';
 
 interface SidenavMenu {
   iconUrl: string;
@@ -50,8 +51,8 @@ export class SidenavComponent {
     }
   ];
 
-  #store: Store<AppState> = inject(Store<AppState>);
+  #store = inject<Store<AppState>>(Store);
 
-  showMenu = toSignal(this.#store.select(state => state.global.menu.showMenu));
+  showMenu = toSignal(this.#store.select((state: AppState) => state.menu.show));
 
 }

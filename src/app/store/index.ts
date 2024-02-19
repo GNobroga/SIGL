@@ -1,25 +1,5 @@
-import {  createReducer, on } from "@ngrx/store";
-import { toggleMenu } from "./actions";
-
-export interface State {
-  menu: {
-    showMenu: boolean;
-  }
-}
+import { Menu } from "./models/menu.model";
 
 export interface AppState {
-  global: State;
+  menu: Menu;
 }
-
-const initialState: State = {
-  menu: {
-    showMenu: true
-  }
-};
-
-export const STATE_KEY = 'global';
-
-export default createReducer(
-  initialState,
-  on(toggleMenu, state => ({...state, menu: { showMenu: !state.menu.showMenu }})),
-);

@@ -1,8 +1,8 @@
 import { Component, DoCheck, computed, inject } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { toSignal } from '@angular/core/rxjs-interop';
+import { toggle } from '../../store/actions/menu.actions';
 import { AppState } from '../../store';
-import { toggleMenu } from '../../store/actions';
 
 @Component({
   selector: 'app-menu-mobile',
@@ -12,9 +12,9 @@ import { toggleMenu } from '../../store/actions';
   styleUrl: './menu-mobile.component.scss'
 })
 export class MenuMobileComponent implements DoCheck {
-  #store: Store<AppState> = inject(Store);
+  #store = inject<Store<AppState>>(Store);
 
-  open = toSignal(this.#store.select(state => state.global.menu.showMenu));
+  open = toSignal(this.#store.select(state => state.menu.show));
 
   public opened = computed(() => this.open());
 
@@ -22,8 +22,7 @@ export class MenuMobileComponent implements DoCheck {
     console.log(this.open());
   }
 
-
   public toggle(): void {
-    this.#store.dispatch(toggleMenu());
+    this.#store.dispatch(toggle());
   }
 }
