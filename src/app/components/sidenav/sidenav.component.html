@@ -10,7 +10,7 @@
 
     <ul class="mt-5 flex flex-col gap-5 w-full ">
       @for (menu of menus; track menu) {
-        <li routerLink="{{ menu.routeLink }}" class="p-2 flex gap-3 text-white  items-center cursor-pointer hover:bg-brand-quinary rounded-sm transition-all">
+        <li routerLink="{{ menu.routeLink }}" routerLinkActive="bg-brand-quinary" [routerLinkActiveOptions]="{ exact: true }" class="p-2 flex gap-3 text-white  items-center cursor-pointer hover:bg-brand-quinary rounded-sm transition-all">
           <img [src]="menu.iconUrl"/>
           <span class="relative top-[0.1rem] text-sm">{{ menu.label }}</span>
         </li>

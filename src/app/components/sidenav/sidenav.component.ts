@@ -1,11 +1,9 @@
 import { Component, OnInit, inject, signal } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { RouterLink, RouterLinkActive } from '@angular/router';
 import { Store } from '@ngrx/store';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { NgIf } from '@angular/common';
 import { MenuMobileComponent } from '../menu-mobile/menu-mobile.component';
-import { SharedModule } from '../../shared/shared.module';
-import { Menu } from '../../store/models/menu.model';
 import { AppState } from '../../store';
 
 interface SidenavMenu {
@@ -17,7 +15,7 @@ interface SidenavMenu {
 @Component({
   selector: 'app-sidenav',
   standalone: true,
-  imports: [RouterLink, NgIf, MenuMobileComponent],
+  imports: [RouterLink, NgIf, MenuMobileComponent, RouterLinkActive],
   templateUrl: './sidenav.component.html',
   styleUrl: './sidenav.component.scss'
 })
