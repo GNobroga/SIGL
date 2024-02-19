@@ -10,9 +10,9 @@
 
     <ul class="mt-5 flex flex-col gap-5 w-full ">
       @for (menu of menus; track menu) {
-        <li routerLink="{{ menu.routeLink }}" routerLinkActive="bg-brand-quinary" [routerLinkActiveOptions]="{ exact: true }" class="p-2 flex gap-3 text-white  items-center cursor-pointer hover:bg-brand-quinary rounded-sm transition-all">
-          <img [src]="menu.iconUrl"/>
-          <span class="relative top-[0.1rem] text-sm">{{ menu.label }}</span>
+        <li routerLink="{{ menu.routeLink }}" routerLinkActive="bg-brand-quinary" [routerLinkActiveOptions]="{ exact: true }"  class="p-2 flex gap-3 text-white  items-center cursor-pointer hover:bg-brand-quinary rounded-sm transition-all">
+          <img [src]="menu.iconUrl" [style]="menu.iconStyles" class="min-w-5 max-w-5"/>
+          <span class="relative top-[0.1rem] text-sm text-white">{{ menu.label }}</span>
         </li>
       }
     </ul>
@@ -36,7 +36,7 @@
 
   </div>
 
-  <div class="sidenav__content bg-brand-secondary flex-1 {{ !showMenu() ? 'ps-[200px]' : ''}}">
+  <div class="sidenav__content bg-brand-secondary flex-1  {{ !showMenu() ? 'ps-[200px]' : ''}}">
     <ng-content></ng-content>
   </div>
 

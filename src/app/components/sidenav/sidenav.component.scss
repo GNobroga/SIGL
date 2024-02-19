@@ -7,11 +7,11 @@
   &__drawer {
     width: 0;
     opacity: 0;
-    animation: invisible 0.3s ease-in forwards;
+    animation: invisible 0.25s ease-in forwards;
 
 
     &.visible {
-      animation: visible 0.3s ease-out forwards;
+      animation: visible 0.25s ease-out forwards;
 
       @keyframes visible {
         to {

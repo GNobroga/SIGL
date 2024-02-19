@@ -10,6 +10,7 @@ interface SidenavMenu {
   iconUrl: string;
   routeLink: string;
   label: string;
+  iconStyles?: string;
 }
 
 @Component({
@@ -36,6 +37,12 @@ export class SidenavComponent {
       iconUrl: 'assets/icons/offers.svg',
       routeLink: '/dashboard/users',
       label: 'Promoções',
+    },
+    {
+      iconUrl: 'assets/icons/pedidos.svg',
+      routeLink: '/dashboard/orders',
+      label: 'Pedidos',
+      iconStyles: 'filter: invert(1);',
     },
     {
       iconUrl: 'assets/icons/cart.svg',
