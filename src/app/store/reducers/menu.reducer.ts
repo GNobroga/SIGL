@@ -3,7 +3,7 @@ import { Menu } from "../models/menu.model";
 import { toggle } from "../actions/menu.actions";
 
 const initialState: Menu = {
-  show: false,
+  show: true,
 }
 
 export const menuFeatureKey = 'menu';

@@ -18,11 +18,11 @@
     <div class="h-[0.13rem] w-full mt-3 bg-brand-quinary"></div>
 
     <div class="mt-5 flex flex-col gap-2 w-full sm:items-center">
-      <span class=" p-2 flex items-center w-full gap-3 rounded-sm cursor-pointer  transition-all   hover:bg-brand-quinary  ">
+      <span routerLink="/dashboard/settings" class=" p-2 flex items-center w-full gap-3 rounded-sm cursor-pointer  transition-all   hover:bg-brand-quinary  ">
         <img src="assets/icons/config.svg"/>
         <span class="relative  text-white text-sm">Configurações</span>
       </span>
-      <span class="mb-3 p-2 flex items-center w-full gap-3 rounded-sm cursor-pointer  transition-all  hover:bg-brand-quinary ">
+      <span routerLink="/account" class="mb-3 p-2 flex items-center w-full gap-3 rounded-sm cursor-pointer  transition-all  hover:bg-brand-quinary ">
         <img src="assets/icons/signout.svg"/>
         <span class="relative  text-white text-sm">Sair</span>
       </span>
@@ -34,7 +34,7 @@
 
   </div>
 
-  <div class="sidenav__content bg-brand-secondary  flex-1 {{ !showMenu() ? 'ps-[200px]' : ''}}">
+  <div class="sidenav__content bg-brand-secondary flex-1 {{ !showMenu() ? 'ps-[200px]' : ''}}">
     <ng-content></ng-content>
   </div>
 

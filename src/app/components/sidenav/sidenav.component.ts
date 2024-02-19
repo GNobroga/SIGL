@@ -31,12 +31,12 @@ export class SidenavComponent {
     },
     {
       iconUrl: 'assets/icons/users.svg',
-      routeLink: 'users',
+      routeLink: '/dashboard/drivers',
       label: 'Entregadores',
     },
     {
       iconUrl: 'assets/icons/offers.svg',
-      routeLink: '/users',
+      routeLink: '/dashboard/users',
       label: 'Promoções',
     },
     {
@@ -46,7 +46,7 @@ export class SidenavComponent {
     },
     {
       iconUrl: 'assets/icons/chart.svg',
-      routeLink: 'chart',
+      routeLink: '/dashboard/chart',
       label: 'Relatórios'
     }
   ];

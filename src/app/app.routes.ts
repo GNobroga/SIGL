@@ -27,12 +27,16 @@ export const routes: Routes = [
         loadComponent: () => import('./pages/dashboard/home/home.component'),
       },
       {
-        path: 'users',
+        path: 'drivers',
         loadComponent: () => import('./pages/dashboard/users/users.component'),
       },
       {
         path: 'products',
         loadComponent: () => import('./pages/products/products.component'),
+      },
+      {
+        path: 'settings',
+        loadComponent: () => import('./pages/settings-page/settings-page.component'),
       }
     ],
   },
